@@ -6,8 +6,6 @@ class Projects extends Component {
 
     this.state = {
       projectName: "",
-      start: "",
-      end: "",
       description: "",
       code: "",
       demo: "",
@@ -29,8 +27,6 @@ class Projects extends Component {
     e.preventDefault();
     const newWork = {
       projectName: this.state.projectName,
-      start: this.state.start,
-      end: this.state.end,
       description: this.state.description,
       code: this.state.code,
       demo: this.state.demo,
@@ -54,32 +50,6 @@ class Projects extends Component {
                     placeholder="Project Name"
                     id="projectName"
                     required
-                    onChange={this.formHandler}
-                  />
-                </label>
-              </div>
-              <div>
-                <label htmlFor="startDate">
-                  Start Date:
-                  <input
-                    type="month"
-                    name="start-project"
-                    id="startDate"
-                    required
-                    placeholder="Start date"
-                    onChange={this.formHandler}
-                  />
-                </label>
-              </div>
-              <div>
-                <label htmlFor="endDate">
-                  End Date:
-                  <input
-                    type="month"
-                    name="end-project"
-                    id="endDate"
-                    required
-                    placeholder="End date"
                     onChange={this.formHandler}
                   />
                 </label>
