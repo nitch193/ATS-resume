@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class About extends Component {
+class PersonalForm extends Component {
   constructor(props) {
     super(props);
 
@@ -20,14 +20,10 @@ class About extends Component {
     });
   };
   preventSubmit = (e) => {
-    this.setState({
-      clicked: !this.state.clicked,
-    });
     e.preventDefault();
   };
-
   render() {
-    return !this.state.clicked ? (
+    return (
       <div>
         <form onSubmit={this.preventSubmit}>
           <div className="body">
@@ -93,22 +89,8 @@ class About extends Component {
           </div>
         </form>
       </div>
-    ) : (
-      <div className="info" onClick={this.preventSubmit}>
-        <div className="name-web">
-          <div className="full-name">{this.state.name}</div>
-          <div className="web">
-            <a href={this.state.linkedin}>LinkedIn</a>
-            <a href={this.state.github}>Github</a>
-          </div>
-        </div>
-        <div className="contact">
-          <div className="mail">{this.state.email}</div>
-          <div className="mobile">{this.state.phone}</div>
-        </div>
-      </div>
     );
   }
 }
 
-export default About;
+export default PersonalForm;

@@ -13,6 +13,7 @@ const Cv = () => {
       <About />
       <hr />
       <Education />
+      <hr />
       <Skills />
       <Projects />
       <Experience />
