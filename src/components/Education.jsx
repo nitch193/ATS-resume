@@ -16,7 +16,6 @@ class Education extends Component {
     };
   }
   previewHandler = () => {
-    console.log(this.state.education);
     this.setState({
       addnew: !this.state.addnew,
     });
@@ -47,7 +46,7 @@ class Education extends Component {
           <div>
             <form onSubmit={this.appendEduation}>
               <div>
-                <label htmlFor="institue">
+                <label htmlFor="institute">
                   Institute:
                   <input
                     type="text"
@@ -124,7 +123,9 @@ class Education extends Component {
                   />
                 </label>
               </div>
-              <button type="submit">Submit</button>
+              <div>
+                <button type="submit">Submit</button>
+              </div>
             </form>
           </div>
         ) : null}
@@ -132,6 +133,7 @@ class Education extends Component {
       </div>
     ) : (
       <div onClick={this.previewHandler}>
+        Education
         {this.state.education.map((item, index) => (
           <div key={index}>{item.institute}</div>
         ))}
