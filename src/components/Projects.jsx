@@ -37,13 +37,12 @@ class Projects extends Component {
   };
   render() {
     return this.state.addnew ? (
-      <div>
+      <div className="projects-div">
         {this.state.addnew ? (
           <div>
-            <form onSubmit={this.appendWork}>
-              <div>
-                <label htmlFor="projectName">
-                  Project Name:
+            <form className="project-form" onSubmit={this.appendWork}>
+              <div className="project-detail">
+                <div id="style-div">
                   <input
                     type="text"
                     name="Project-Name"
@@ -52,11 +51,9 @@ class Projects extends Component {
                     required
                     onChange={this.formHandler}
                   />
-                </label>
-              </div>
-              <div>
-                <label htmlFor="description">
-                  Description:
+                  <label htmlFor="projectName">Project Name </label>
+                </div>
+                <div id="style-div">
                   <textarea
                     type="text"
                     name="Description"
@@ -65,11 +62,11 @@ class Projects extends Component {
                     placeholder="Add Description"
                     onChange={this.formHandler}
                   />
-                </label>
+                  <label htmlFor="description">Description: </label>
+                </div>
               </div>
-              <div>
-                <label htmlFor="code">
-                  Code:
+              <div className="code-demo">
+                <div id="style-div">
                   <input
                     type="url"
                     name="Code"
@@ -77,11 +74,9 @@ class Projects extends Component {
                     placeholder="Enter Code URL"
                     onChange={this.formHandler}
                   />
-                </label>
-              </div>
-              <div>
-                <label htmlFor="demo">
-                  Demo:
+                  <label htmlFor="code">Code</label>
+                </div>
+                <div id="style-div">
                   <input
                     type="url"
                     name="demo"
@@ -89,10 +84,11 @@ class Projects extends Component {
                     placeholder="Enter Demo URL"
                     onChange={this.formHandler}
                   />
-                </label>
+                  <label htmlFor="demo">Demo</label>
+                </div>
               </div>
-              <div>
-                <button type="submit">Submit</button>
+              <div className="project-submit">
+                <button type="submit">Add Project</button>
               </div>
             </form>
           </div>

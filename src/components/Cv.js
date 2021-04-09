@@ -11,15 +11,10 @@ const Cv = () => {
   return (
     <div className="cv">
       <About />
-      <hr />
       <Education />
-      <hr />
       <Skills />
-      <hr />
       <Projects />
-      <hr />
       <Experience />
-      <hr />
       <Achievements />
       <Interests />
     </div>

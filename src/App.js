@@ -3,6 +3,7 @@ import Cv from "./components/Cv";
 import Footer from "./components/Footer";
 import Navbar from "./components/Nabar";
 import "./App.css";
+import "./cv.css";
 
 class App extends Component {
   render() {

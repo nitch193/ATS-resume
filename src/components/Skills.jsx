@@ -33,12 +33,11 @@ export class Skills extends Component {
   };
   render() {
     return this.state.preview ? (
-      <div>
+      <div className="skill-div">
         {this.state.preview ? (
           <div>
-            <form onSubmit={this.handleSubmit}>
-              <div>
-                <label htmlFor="domain">Domain</label>
+            <form className="skill-form" onSubmit={this.handleSubmit}>
+              <div id="style-div">
                 <input
                   type="text"
                   name="domain"
@@ -47,9 +46,9 @@ export class Skills extends Component {
                   placeholder="Domain"
                   onChange={this.formHandler}
                 />
+                <label htmlFor="domain">Domain</label>
               </div>
-              <div>
-                <label htmlFor="domainSpecificSkills">Skills</label>
+              <div id="style-div">
                 <input
                   type="text"
                   name="domainSpecificSkills"
@@ -57,9 +56,10 @@ export class Skills extends Component {
                   placeholder="Add Skills"
                   onChange={this.formHandler}
                 />
+                <label htmlFor="domainSpecificSkills">Skills</label>
               </div>
-              <div>
-                <button type="submit">Submit</button>
+              <div className="skill-submit">
+                <button type="submit">Add Skills</button>
               </div>
             </form>
           </div>

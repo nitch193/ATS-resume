@@ -41,13 +41,12 @@ class Education extends Component {
   };
   render() {
     return this.state.addnew ? (
-      <div>
+      <div className="education-div">
         {this.state.addnew ? (
           <div>
-            <form onSubmit={this.appendEduation}>
-              <div>
-                <label htmlFor="institute">
-                  Institute:
+            <form className="education-body" onSubmit={this.appendEduation}>
+              <div className="institute-detail">
+                <div id="style-div">
                   <input
                     type="text"
                     name="Institute"
@@ -56,37 +55,9 @@ class Education extends Component {
                     required
                     onChange={this.formHandler}
                   />
-                </label>
-              </div>
-              <div>
-                <label htmlFor="start">
-                  Start Date:
-                  <input
-                    type="month"
-                    name="start"
-                    id="start"
-                    required
-                    placeholder="Start date"
-                    onChange={this.formHandler}
-                  />
-                </label>
-              </div>
-              <div>
-                <label htmlFor="end">
-                  End Date:
-                  <input
-                    type="month"
-                    name="end"
-                    id="end"
-                    required
-                    placeholder="End date"
-                    onChange={this.formHandler}
-                  />
-                </label>
-              </div>
-              <div>
-                <label htmlFor="course">
-                  Course:
+                  <label htmlFor="institute">Institute </label>
+                </div>
+                <div id="style-div">
                   <input
                     type="text"
                     name="course"
@@ -95,11 +66,9 @@ class Education extends Component {
                     placeholder="Couse Name"
                     onChange={this.formHandler}
                   />
-                </label>
-              </div>
-              <div>
-                <label htmlFor="score">
-                  Score:
+                  <label htmlFor="course">Course</label>
+                </div>
+                <div id="style-div">
                   <input
                     type="text"
                     name="score"
@@ -108,11 +77,33 @@ class Education extends Component {
                     placeholder="Score"
                     onChange={this.formHandler}
                   />
-                </label>
+                  <label htmlFor="score">Score:</label>
+                </div>
               </div>
-              <div>
-                <label htmlFor="place">
-                  Place:
+              <div className="course-time">
+                <div id="style-div">
+                  <input
+                    type="month"
+                    name="start"
+                    id="start"
+                    required
+                    placeholder="Start date"
+                    onChange={this.formHandler}
+                  />
+                  <label htmlFor="start">Start Date</label>
+                </div>
+                <div id="style-div">
+                  <input
+                    type="month"
+                    name="end"
+                    id="end"
+                    required
+                    placeholder="End date"
+                    onChange={this.formHandler}
+                  />
+                  <label htmlFor="end">End Date</label>
+                </div>
+                <div id="style-div">
                   <input
                     type="text"
                     name="place"
@@ -121,10 +112,11 @@ class Education extends Component {
                     placeholder="Place"
                     onChange={this.formHandler}
                   />
-                </label>
+                  <label htmlFor="place">Place </label>
+                </div>
               </div>
-              <div>
-                <button type="submit">Submit</button>
+              <div className="education-submit">
+                <button type="submit"> Add Education</button>
               </div>
             </form>
           </div>

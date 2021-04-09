@@ -33,12 +33,11 @@ export class Achievements extends Component {
   };
   render() {
     return this.state.preview ? (
-      <div>
+      <div className="achievement-div">
         {this.state.preview ? (
           <div>
-            <form onSubmit={this.handleSubmit}>
-              <div>
-                <label htmlFor="achievementName">Achievement</label>
+            <form className="achievement-form" onSubmit={this.handleSubmit}>
+              <div id="style-div">
                 <input
                   type="text"
                   name="achievement"
@@ -47,9 +46,9 @@ export class Achievements extends Component {
                   placeholder="Name of Position/Achievement"
                   onChange={this.formHandler}
                 />
+                <label htmlFor="achievementName">Achievement</label>
               </div>
-              <div>
-                <label htmlFor="describe">Skills</label>
+              <div id="style-div">
                 <textarea
                   type="text"
                   name="Description"
@@ -57,9 +56,10 @@ export class Achievements extends Component {
                   placeholder="Add DEscription"
                   onChange={this.formHandler}
                 />
+                <label htmlFor="describe">Description</label>
               </div>
-              <div>
-                <button type="submit">Submit</button>
+              <div className="achievement-submit">
+                <button type="submit">Add Achievement</button>
               </div>
             </form>
           </div>

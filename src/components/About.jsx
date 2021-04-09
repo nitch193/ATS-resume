@@ -30,39 +30,49 @@ class About extends Component {
     return !this.state.clicked ? (
       <div>
         <form onSubmit={this.preventSubmit}>
-          <div className="body">
-            <div>
-              <input
-                type="text"
-                name="Name"
-                id="name"
-                value={this.state.name}
-                placeholder="Name"
-                required
-                onChange={this.handleInput}
-              />
-              <input
-                type="url"
-                name="Github"
-                id="github"
-                placeholder="Github Profile"
-                value={this.state.gitHub}
-                required
-                onChange={this.handleInput}
-              />
-              <input
-                type="url"
-                name="LinkedIn"
-                id="linkedin"
-                placeholder="LinkedIn Profile"
-                value={this.state.linkedIn}
-                required
-                onChange={this.handleInput}
-              />
+          <div className="about-div">
+            <div className="name-and-url">
+              <div id="style-div">
+                <input
+                  type="text"
+                  name="Name"
+                  id="name"
+                  value={this.state.name}
+                  required
+                  placeholder="Full Name"
+                  onChange={this.handleInput}
+                />
+                <label id="name-id" htmlFor="name">
+                  Name
+                </label>
+              </div>
+              <div id="style-div">
+                <input
+                  type="url"
+                  name="Github"
+                  id="github"
+                  placeholder="Github Profile"
+                  value={this.state.gitHub}
+                  required
+                  onChange={this.handleInput}
+                />
+                <label htmlFor="github">Github</label>
+              </div>
+              <div id="style-div">
+                <input
+                  type="url"
+                  name="LinkedIn"
+                  id="linkedin"
+                  placeholder="LinkedIn Profile"
+                  value={this.state.linkedIn}
+                  required
+                  onChange={this.handleInput}
+                />
+                <label htmlFor="linkedin">LinkedIn</label>
+              </div>
             </div>
             <div className="email-phone">
-              <div>
-                <label htmlFor="email">Email</label>
+              <div id="style-div">
                 <input
                   type="email"
                   name="Email"
@@ -72,9 +82,9 @@ class About extends Component {
                   value={this.state.email}
                   onChange={this.handleInput}
                 />
+                <label htmlFor="email">Email</label>
               </div>
-              <div>
-                <label htmlFor="phone">Phone</label>
+              <div id="style-div">
                 <input
                   type="tel"
                   name="Phone"
@@ -85,11 +95,12 @@ class About extends Component {
                   value={this.state.phone}
                   onChange={this.handleInput}
                 />
+                <label htmlFor="phone">Phone</label>
               </div>
             </div>
           </div>
           <div className="submit">
-            <button type="submit">Submit</button>
+            <button type="submit">Add Personal Info</button>
           </div>
         </form>
       </div>

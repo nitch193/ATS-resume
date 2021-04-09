@@ -1,27 +1,234 @@
-form {
-  display: flex;
-  flex-direction: column;
+* {
+  box-sizing: border-box;
 }
-.body {
-  display: flex;
-  justify-content: space-between;
+.nav {
+  width: 100%;
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 25px;
 }
-.body :first-child {
-  display: flex;
-  flex-direction: column;
-}
-.body :last-child {
-  display: flex;
-  flex-direction: column;
+.footer {
+  text-align: center;
 }
 .cv {
   margin: 0 auto;
   width: 612px;
   height: 792px;
+  padding: 25px;
+  border: #aaa 2px solid;
 }
-.email-phone :nth-child(n) {
+.about-div {
+  display: flex;
+  justify-content: space-between;
+}
+.name-and-url {
+  display: flex;
+  flex-direction: column;
+}
+.email-phone {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.education-body {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.education-div {
+  position: relative;
+}
+.education-submit {
+  position: absolute;
+  bottom: 0;
+  left: 80px;
+}
+.institute-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.course-time {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.skill-form {
+  display: flex;
+  justify-content: space-between;
+}
+.skill-div {
+  position: relative;
+}
+.skill-submit {
+  position: absolute;
+  bottom: 0;
+  left: 80px;
+}
+.projects-div {
+  position: relative;
+}
+.project-submit {
+  position: absolute;
+  bottom: 0;
+  left: 80px;
+}
+.project-form {
+  display: flex;
+  flex-direction: column;
+}
+.project-detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.code-demo {
+  display: flex;
+  justify-content: space-between;
+}
+.jobs-div {
+  position: relative;
+}
+.job-submit {
+  position: absolute;
+  left: 80px;
+  bottom: 0;
+}
+.job-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.job-detail {
+  width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
+  justify-content: space-between;
+}
+.about-job {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.time-place {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.achievement-div {
+  position: relative;
+}
+.achievement-submit {
+  position: absolute;
+  bottom: 0;
+  left: 80px;
+}
+.achievement-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+#style-div {
+  position: relative;
+  width: 250px;
+}
+#style-div input {
+  background: transparent;
+  border: none;
+  border-bottom: solid 1px #0b88ff;
+  padding: 17px 2px 1px;
+  transition: padding 0.4s;
+  width: 100%;
+}
+#style-div input:placeholder-shown + label {
+  color: #aaa;
+  font-size: 14px;
+  top: 15px;
+}
+#style-div input:focus + label,
+#style-div label {
+  color: #4476bd;
+  font-size: 12px;
+  pointer-events: none;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  transition: top 0.4s, left 0.4s, font-size 0.4s;
+}
+#style-div input::placeholder {
+  color: transparent;
+  display: none;
+}
+input:focus,
+input:not(:placeholder-shown) {
+  border-bottom: solid 1px #4476bd;
+  outline: none;
+}
+#style-div {
+  position: relative;
+  width: 250px;
+}
+#style-div textarea {
+  background: transparent;
+  border: none;
+  border-bottom: solid 1px #0b88ff;
+  padding: 17px 2px 1px;
+  transition: padding 0.4s;
+  width: 100%;
+}
+#style-div textarea:placeholder-shown + label {
+  color: #aaa;
+  font-size: 14px;
+  top: 15px;
+}
+#style-div textarea:focus + label,
+#style-div label {
+  color: #4476bd;
+  font-size: 12px;
+  pointer-events: none;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  transition: top 0.4s, left 0.4s, font-size 0.4s;
+}
+#style-div textarea::placeholder {
+  color: transparent;
+  display: none;
+}
+textarea:focus,
+textarea:not(:placeholder-shown) {
+  border-bottom: solid 1px #4476bd;
+  outline: none;
+}
+
+hr {
+  margin: 0;
+}
+button {
+  border: 1px solid tomato;
+  background-color: white;
+  font-size: 15px;
+  padding: 4px 8px 4px 8px;
+  cursor: pointer;
+  transition: 0.4s;
+  color: tomato;
+  margin: 2px 0px 2px 0px;
+}
+button:hover {
+  color: white;
+  background-color: tomato;
+}
+form button {
+  border: 1px solid #64f164;
+  background-color: #4fdb61;
+  font-size: 15px;
+  padding: 4px 8px 4px 8px;
+  cursor: pointer;
+  transition: 0.4s;
+  color: white;
+  margin: 2px 0px 2px 0;
+}
+form button:hover {
+  color: #4fdb61;
+  background-color: white;
 }

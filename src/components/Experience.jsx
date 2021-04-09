@@ -42,78 +42,73 @@ class Experience extends Component {
   };
   render() {
     return this.state.addnew ? (
-      <div>
+      <div className="jobs-div">
         {this.state.addnew ? (
           <div>
-            <form onSubmit={this.appendEduation}>
-              <div>
-                <label htmlFor="company">
-                  Company:
-                  <input
-                    type="text"
-                    name="Company"
-                    placeholder="Company Name"
-                    id="company"
-                    required
-                    onChange={this.formHandler}
-                  />
-                </label>
+            <form className="job-form" onSubmit={this.appendEduation}>
+              <div className="job-detail">
+                <div className="about-job">
+                  <div id="style-div">
+                    <input
+                      type="text"
+                      name="Company"
+                      placeholder="Company Name"
+                      id="company"
+                      required
+                      onChange={this.formHandler}
+                    />
+                    <label htmlFor="company">Company </label>
+                  </div>
+                  <div id="style-div">
+                    <input
+                      type="text"
+                      name="role"
+                      id="role"
+                      required
+                      placeholder="Role"
+                      onChange={this.formHandler}
+                    />
+                    <label htmlFor="role">Role </label>
+                  </div>
+                </div>
+                <div className="time-place">
+                  <div id="style-div">
+                    <input
+                      type="text"
+                      name="location"
+                      id="location"
+                      required
+                      placeholder="Location"
+                      onChange={this.formHandler}
+                    />
+                    <label htmlFor="location">Location</label>
+                  </div>
+                  <div id="style-div">
+                    <input
+                      type="month"
+                      name="start-date"
+                      id="startDate"
+                      required
+                      placeholder="Start date"
+                      onChange={this.formHandler}
+                    />
+                    <label htmlFor="startDate">Start Date </label>
+                  </div>
+                  <div id="style-div">
+                    <input
+                      type="month"
+                      name="end-date"
+                      id="endDate"
+                      required
+                      placeholder="End date"
+                      onChange={this.formHandler}
+                    />
+                    <label htmlFor="endDate">End Date </label>
+                  </div>
+                </div>
               </div>
-              <div>
-                <label htmlFor="startDate">
-                  Start Date:
-                  <input
-                    type="month"
-                    name="start-date"
-                    id="startDate"
-                    required
-                    placeholder="Start date"
-                    onChange={this.formHandler}
-                  />
-                </label>
-              </div>
-              <div>
-                <label htmlFor="end">
-                  End Date:
-                  <input
-                    type="month"
-                    name="end"
-                    id="end"
-                    required
-                    placeholder="End date"
-                    onChange={this.formHandler}
-                  />
-                </label>
-              </div>
-              <div>
-                <label htmlFor="role">
-                  Role:
-                  <input
-                    type="text"
-                    name="role"
-                    id="role"
-                    required
-                    placeholder="Role"
-                    onChange={this.formHandler}
-                  />
-                </label>
-              </div>
-              <div>
-                <label htmlFor="location">
-                  Location:
-                  <input
-                    type="text"
-                    name="location"
-                    id="location"
-                    required
-                    placeholder="Location"
-                    onChange={this.formHandler}
-                  />
-                </label>
-              </div>
-              <div>
-                <label htmlFor="whatYouDid">
-                  What You did:
+              <div className="describe-work">
+                <div id="style-div">
                   <textarea
                     type="text"
                     name="whatYouDid"
@@ -122,10 +117,11 @@ class Experience extends Component {
                     placeholder="Describe what you did"
                     onChange={this.formHandler}
                   />
-                </label>
+                  <label htmlFor="whatYouDid">What You did: </label>
+                </div>
               </div>
-              <div>
-                <button type="submit">Submit</button>
+              <div className="job-submit">
+                <button type="submit">Add Experience</button>
               </div>
             </form>
           </div>
