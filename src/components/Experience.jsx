@@ -130,9 +130,27 @@ class Experience extends Component {
       </div>
     ) : (
       <div onClick={this.previewHandler}>
-        Experience
+        <div className="cv-title">Experience</div>
         {this.state.jobs.map((item, index) => (
-          <div key={index}>{item.company}</div>
+          <div className="job-list" key={index}>
+            <div className="job-item">
+              <div className="company-role">
+                <div>
+                  <div>
+                    <strong>{item.company}</strong>
+                  </div>
+                  <div>{item.role}</div>
+                </div>
+                <div>
+                  <div>{item.location}</div>
+                  <div>
+                    {item.startDate}-{item.endDate}
+                  </div>
+                </div>
+              </div>
+              <div className="whatyoudid">{item.whatYouDid}</div>
+            </div>
+          </div>
         ))}
       </div>
     );

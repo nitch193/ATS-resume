@@ -68,11 +68,16 @@ export class Achievements extends Component {
       </div>
     ) : (
       <div onClick={this.handlePreview}>
-        Achievements {`&`} Responsibility
+        <div className="cv-title">Achievements {`&`} Responsibility</div>
         {this.state.achievements.map((achievement) => (
-          <div key={achievement.achievementName}>
-            {`${achievement.achievementName} ${achievement.description}`}
-          </div>
+          <ul key={achievement.achievementName}>
+            <li className="list-item">
+              <div className="name-score">
+                <strong>{achievement.achievementName}</strong>
+                {`: ${achievement.describe}`}
+              </div>
+            </li>
+          </ul>
         ))}
       </div>
     );

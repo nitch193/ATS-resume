@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-
 class About extends Component {
   constructor(props) {
     super(props);
@@ -114,8 +113,10 @@ class About extends Component {
           </div>
         </div>
         <div className="contact">
-          <div className="mail">{this.state.email}</div>
-          <div className="mobile">{this.state.phone}</div>
+          <a className="mail" href={`mailto:${this.state.email}`}>
+            Email:{this.state.email}
+          </a>
+          <div className="mobile">Phone:{` ${this.state.phone}`}</div>
         </div>
       </div>
     );

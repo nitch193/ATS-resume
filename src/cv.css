@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+  font-family: "Times New Roman", Times, serif;
+}
+.info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8em;
+}
+.full-name {
+  font-size: 1rem;
+  font-weight: 650;
+}
+.web {
+  display: flex;
+  flex-direction: column;
+}
+a {
+  all: unset;
+  cursor: pointer;
+}
+a:visited {
+  color: black;
+}
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.mobile {
+  margin-top: 2px;
+}
+ul {
+  list-style-position: inside;
+  margin: 0;
+  counter-reset: lists;
+  padding: 0;
+}
+.list-item {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.list-item .name-score {
+  padding-left: 10px;
+}
+.list-item::before {
+  position: absolute;
+  counter-increment: lists;
+  font-size: 1.2em;
+  content: "•";
+}
+.cv-title {
+  font-size: 1.1rem;
+  border-bottom: 2px solid black;
+}
+.cv-skills {
+  border-bottom: 2px black solid;
+}
+.skill-ul li {
+  display: flex;
+  justify-content: flex-start;
+}
+.project-name {
+  flex-wrap: wrap;
+}
+.job-list {
+  counter-reset: jobs;
+}
+.job-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.job-item::before {
+  position: absolute;
+  counter-increment: lists;
+  font-size: 1.2em;
+  content: "•";
+}
+.company-role {
+  padding-left: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.whatyoudid {
+  padding-left: 10px;
+}

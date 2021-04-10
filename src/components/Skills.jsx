@@ -67,12 +67,15 @@ export class Skills extends Component {
         <button onClick={this.handlePreview}>Preview</button>
       </div>
     ) : (
-      <div onClick={this.handlePreview}>
-        Skills
+      <div className="skill-div" onClick={this.handlePreview}>
+        <div className="cv-title">Skills</div>
         {this.state.skills.map((skill) => (
-          <div key={skill.domain}>
-            {`${skill.domain} ${skill.domainSpecificSkills}`}
-          </div>
+          <ul className="skill-ul" key={skill.domain}>
+            <li className="list-item">
+              <strong className="name-score">{`${skill.domain}`}</strong>
+              {`: ${skill.domainSpecificSkills}`}
+            </li>
+          </ul>
         ))}
       </div>
     );

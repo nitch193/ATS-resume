@@ -97,9 +97,18 @@ class Projects extends Component {
       </div>
     ) : (
       <div onClick={this.previewHandler}>
-        Projects
+        <div className="cv-title">Projects</div>
         {this.state.works.map((item, index) => (
-          <div key={index}>{item.projectName}</div>
+          <ul key={index}>
+            <li className="list-item ">
+              <div className="project-name name-score">
+                <strong>{item.projectName}</strong>
+                {`: ${item.description}`}
+                {item.code.length ? <a href={item.code}>[Code]</a> : null}
+                {item.demo.length ? <a href={item.demo}>[Demo]</a> : null}
+              </div>
+            </li>
+          </ul>
         ))}
       </div>
     );

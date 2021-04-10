@@ -125,9 +125,22 @@ class Education extends Component {
       </div>
     ) : (
       <div onClick={this.previewHandler}>
-        Education
+        <div className="cv-title">Education</div>
         {this.state.education.map((item, index) => (
-          <div key={index}>{item.institute}</div>
+          <ul key={index}>
+            <li className="list-item">
+              <div className="name-score">
+                <div className="institute-name">{item.institute}</div>
+                <div className="course-score">{`${item.course}; Score: ${item.score}`}</div>
+              </div>
+              <div className="place-date">
+                <div className="place">{item.place}</div>
+                <div className="duration">
+                  {item.start} - {item.end}
+                </div>
+              </div>
+            </li>
+          </ul>
         ))}
       </div>
     );
