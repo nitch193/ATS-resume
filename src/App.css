@@ -232,3 +232,21 @@ form button:hover {
   color: #4fdb61;
   background-color: white;
 }
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .cv,
+  .cv * {
+    visibility: visible;
+  }
+  .cv {
+    position: absolute;
+    left: 25px;
+    top: 25px;
+  }
+  @page {
+    margin: 0;
+    size: A4;
+  }
+}

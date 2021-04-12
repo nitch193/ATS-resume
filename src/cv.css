@@ -5,11 +5,9 @@
 .info {
   display: flex;
   justify-content: space-between;
-  font-size: 0.8em;
 }
 .full-name {
-  font-size: 1rem;
-  font-weight: 650;
+  font-weight: bold;
 }
 .web {
   display: flex;
@@ -51,7 +49,8 @@ ul {
   content: "•";
 }
 .cv-title {
-  font-size: 1.1rem;
+  margin-top: 5px;
+  font-size: 1rem;
   border-bottom: 2px solid black;
 }
 .cv-skills {
@@ -86,4 +85,24 @@ ul {
 }
 .whatyoudid {
   padding-left: 10px;
+}
+.course-score {
+  font-size: 0.9em;
+  font-style: italic;
+  font-weight: 500;
+}
+.institute-name {
+  font-weight: bold;
+}
+.place {
+  font-size: 0.9em;
+}
+.duration {
+  font-style: italic;
+  font-size: 0.9em;
+}
+.place-date {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
