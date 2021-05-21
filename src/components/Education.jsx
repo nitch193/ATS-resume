@@ -124,7 +124,7 @@ class Education extends Component {
         <button onClick={this.previewHandler}>Preview</button>
       </div>
     ) : (
-      <div onClick={this.previewHandler}>
+      <div className="gap" onClick={this.previewHandler}>
         <div className="cv-title">Education</div>
         {this.state.education.map((item, index) => (
           <ul key={index}>

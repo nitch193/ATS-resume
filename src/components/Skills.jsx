@@ -67,7 +67,7 @@ export class Skills extends Component {
         <button onClick={this.handlePreview}>Preview</button>
       </div>
     ) : (
-      <div className="skill-div" onClick={this.handlePreview}>
+      <div className="gap skill-div" onClick={this.handlePreview}>
         <div className="cv-title">Skills</div>
         {this.state.skills.map((skill) => (
           <ul className="skill-ul" key={skill.domain}>

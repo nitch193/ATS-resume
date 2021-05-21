@@ -2,24 +2,25 @@
   box-sizing: border-box;
 }
 .nav {
+  display: flex;
   width: 100%;
   font-size: 2em;
-  text-align: center;
   margin-bottom: 25px;
+  justify-content: space-between;
 }
 .footer {
   text-align: center;
 }
 .cv {
   margin: 0 auto;
-  width: 612px;
-  height: 792px;
-  padding: 25px;
-  border: #aaa 2px solid;
+  width: 794px;
+  height: 1100px;
+  padding: 23px;
+  border: 2px solid black;
 }
 .about-div {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .name-and-url {
   display: flex;
@@ -128,27 +129,24 @@
   justify-content: space-between;
   align-items: flex-end;
 }
-#style-div {
-  position: relative;
-  width: 250px;
-}
+
 #style-div input {
   background: transparent;
   border: none;
   border-bottom: solid 1px #0b88ff;
-  padding: 17px 2px 1px;
+  padding: 20px 2px 1px;
   transition: padding 0.4s;
   width: 100%;
 }
 #style-div input:placeholder-shown + label {
   color: #aaa;
-  font-size: 14px;
-  top: 15px;
+  font-size: 15px;
+  top: 16px;
 }
 #style-div input:focus + label,
 #style-div label {
   color: #4476bd;
-  font-size: 12px;
+  font-size: 13px;
   pointer-events: none;
   position: absolute;
   left: 2px;
@@ -166,25 +164,25 @@ input:not(:placeholder-shown) {
 }
 #style-div {
   position: relative;
-  width: 250px;
+  width: 320px;
 }
 #style-div textarea {
   background: transparent;
   border: none;
   border-bottom: solid 1px #0b88ff;
-  padding: 17px 2px 1px;
+  padding: 20px 2px 1px;
   transition: padding 0.4s;
   width: 100%;
 }
 #style-div textarea:placeholder-shown + label {
   color: #aaa;
-  font-size: 14px;
-  top: 15px;
+  font-size: 15px;
+  top: 16px;
 }
 #style-div textarea:focus + label,
 #style-div label {
   color: #4476bd;
-  font-size: 12px;
+  font-size: 13px;
   pointer-events: none;
   position: absolute;
   left: 2px;
@@ -202,7 +200,7 @@ textarea:not(:placeholder-shown) {
 }
 
 hr {
-  margin: 0;
+  margin: 2px 0 2px 0;
 }
 button {
   border: 1px solid tomato;
@@ -212,7 +210,7 @@ button {
   cursor: pointer;
   transition: 0.4s;
   color: tomato;
-  margin: 2px 0px 2px 0px;
+  margin: 3px 0px 3px 0px;
 }
 button:hover {
   color: white;
@@ -226,7 +224,7 @@ form button {
   cursor: pointer;
   transition: 0.4s;
   color: white;
-  margin: 2px 0px 2px 0;
+  margin: 3px 0px 3px 0;
 }
 form button:hover {
   color: #4fdb61;
@@ -241,9 +239,12 @@ form button:hover {
     visibility: visible;
   }
   .cv {
+    border: none;
     position: absolute;
     left: 25px;
     top: 25px;
+    right: 25px;
+    bottom: 25px;
   }
   @page {
     margin: 0;

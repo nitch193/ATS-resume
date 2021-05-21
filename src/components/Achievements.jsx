@@ -46,7 +46,9 @@ export class Achievements extends Component {
                   placeholder="Name of Position/Achievement"
                   onChange={this.formHandler}
                 />
-                <label htmlFor="achievementName">Achievement</label>
+                <label htmlFor="achievementName">
+                  Achievements {`&`} Responsibilities
+                </label>
               </div>
               <div id="style-div">
                 <textarea
@@ -67,7 +69,7 @@ export class Achievements extends Component {
         <button onClick={this.handlePreview}>Preview</button>
       </div>
     ) : (
-      <div onClick={this.handlePreview}>
+      <div className="gap" onClick={this.handlePreview}>
         <div className="cv-title">Achievements {`&`} Responsibility</div>
         {this.state.achievements.map((achievement) => (
           <ul key={achievement.achievementName}>

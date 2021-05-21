@@ -96,7 +96,7 @@ class Projects extends Component {
         <button onClick={this.previewHandler}>Preview</button>
       </div>
     ) : (
-      <div onClick={this.previewHandler}>
+      <div className="gap" onClick={this.previewHandler}>
         <div className="cv-title">Projects</div>
         {this.state.works.map((item, index) => (
           <ul key={index}>
