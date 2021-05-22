@@ -104,7 +104,7 @@ class About extends Component {
         </form>
       </div>
     ) : (
-      <div className="info" onClick={this.preventSubmit}>
+      <div className="gap info" onClick={this.preventSubmit}>
         <div className="name-web">
           <div className="full-name">{this.state.name}</div>
           <div className="web">

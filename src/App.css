@@ -2,11 +2,10 @@
   box-sizing: border-box;
 }
 .nav {
-  display: flex;
   width: 100%;
   font-size: 2em;
   margin-bottom: 25px;
-  justify-content: space-between;
+  text-align: center;
 }
 .footer {
   text-align: center;
@@ -250,4 +249,13 @@ form button:hover {
     margin: 0;
     size: A4;
   }
+}
+
+.nav button {
+  position: absolute;
+  right: 15px;
+  top: 5px;
+  background-color: #4476bd;
+  border: 2px #4476bd solid;
+  color: white;
 }

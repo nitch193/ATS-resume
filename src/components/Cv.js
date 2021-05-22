@@ -5,7 +5,6 @@ import Skills from "./Skills";
 import Projects from "./Projects";
 import Experience from "./Experience";
 import Achievements from "./Achievements";
-import Interests from "./Interests";
 
 const Cv = () => {
   return (
@@ -16,7 +15,6 @@ const Cv = () => {
       <Projects />
       <Experience />
       <Achievements />
-      <Interests />
     </div>
   );
 };

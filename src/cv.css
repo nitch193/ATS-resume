@@ -17,6 +17,7 @@
 }
 .gap {
   margin-bottom: 20px;
+  cursor: pointer;
 }
 a {
   all: unset;
